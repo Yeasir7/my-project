@@ -12,7 +12,7 @@ const PriceOption = ({option}) => {
             <h2 className='text-2xl mt-5 mb-6'>{name} Membership</h2>
             <div className='flex-grow'>
             {
-                features.map(feature => <Feature feature={feature}></Feature>)
+                features.map((feature,idx) => <Feature key={idx} feature={feature}></Feature>)
             }
             </div>
             <button className="btn w-full bg-green-500 text-white hover:bg-green-900">Buy Now</button>

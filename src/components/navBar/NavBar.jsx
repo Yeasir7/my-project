@@ -26,7 +26,7 @@ const NavBar = () => {
             </div>
             <ul className={`md:flex duration-100 bg-yellow-400 text-black p-3 rounded-xl absolute md:static ${open ? 'top-16' : '-top-60'}`}>
                 {
-                    routes.map(route => <Link route={route}></Link>)
+                    routes.map((route, idx) => <Link key={idx} route={route}></Link>)
                 }
             </ul>
         </nav>
